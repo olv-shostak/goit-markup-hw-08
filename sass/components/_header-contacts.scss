@@ -1,15 +1,25 @@
+@media screen and (min-width: 1200px) {
 .contacts {
   display: flex;
 }
+}
 
-.contacts__item:not(:last-child) {
-  margin-right: 50px;
+// .contacts__item:not(:last-child) {
+//   margin-right: 50px;
+// }
+.contacts__item:nth-child(1) {
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
 }
 
 .contacts__link {
   display: inline-block;
-  padding-bottom: 32px;
-  padding-top: 31px;
+//   padding-bottom: 32px;
+//   padding-top: 31px;
   color: $primary-text-color;
   fill: $primary-text-color;
   font-weight: 500;

@@ -7,6 +7,8 @@
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity $duration $timing-fuction;
+  padding: 93px 15px;
+  overflow-y: scroll;
 
   &--is-hidden {
     opacity: 0;
@@ -15,18 +17,37 @@
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-height: 581px;
-  min-width: 528px;
-  padding: 40px 39px 40px 41px;
+  position: relative;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // min-height: 581px;
+  // min-width: 528px;
+  padding: 40px 40px 40px 40px;
   background-color: #ffffff;
-  transform: translate(-50%, -50%) scale(1);
+  // transform: translate(-50%, -50%) scale(1);
   transition: transform $duration linear;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-height: 450px;
+      min-width: 609px;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    @media screen and (min-width: 1200px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-height: 581px;
+      min-width: 528px;
+      transform: translate(-50%, -50%) scale(1);
+    }
 
   .backdrop--is-hidden & {
     transform: translate(-50%, -50%) scale(1.2);
@@ -111,6 +132,7 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   font-size: 14px;
+  font-size: 12px;
 
   transition-property: border-color;
   transition-duration: $duration;
@@ -160,7 +182,8 @@
   height: 15px;
   border: 2px solid #000000;
   border-radius: 2px;
-  margin-right: 8px;
+  margin-right: 7px;
+  margin-bottom: -3px;
 
   transition-property: background-color, border-color;
   transition-duration: $duration;
@@ -180,16 +203,24 @@
 }
 
 .modal-form__policy-text {
-  @extend %centredFlex;
+  // @extend %centredFlex;
+  display: inline;
   color: $primary-text-color;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.715;
+  // font-size: 14px;
+  font-size: 12px;
+  // line-height: 1.715;
+  line-height: 1.667;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.715;
+  }
 }
 
 .modal-form__policy-link {
-  display: inline-block;
+  display: inline;
   text-decoration-line: underline;
   color: $accent-color;
 }

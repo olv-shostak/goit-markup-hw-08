@@ -1,5 +1,13 @@
 .join {
-  margin-left: 70px;
+  margin-top: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 
 .join__title {
@@ -13,6 +21,7 @@
 
 .join__list {
   display: flex;
+  justify-content: center;
   fill: #fff;
   margin-top: 20px;
 }

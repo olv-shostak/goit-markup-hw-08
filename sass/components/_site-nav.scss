@@ -1,5 +1,9 @@
 .site-nav {
   display: flex;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 250px;
+  }
 }
 
 .site-nav__item:not(:last-child) {

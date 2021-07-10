@@ -16,10 +16,10 @@
   <body>
     <header class="header">
       <div class="container header__container">
+        <a href="./index.html" class="logo logo--tab"
+          ><span class="logo__web logo__web--tab">Web</span>Studio</a
+        >
         <nav class="navigation">
-          <a href="./index.html" class="logo"
-            ><span class="logo__web">Web</span>Studio</a
-          >
           <ul class="site-nav">
             <li class="site-nav__item">
               <a
@@ -29,7 +29,7 @@
               >
             </li>
             <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link site-nav__link--active">Портфолио</a>
+              <a href="./portfolio.html" class="site-nav__link  site-nav__link--active">Портфолио</a>
             </li>
             <li class="site-nav__item">
               <a href="" class="site-nav__link">Контакты</a>
@@ -56,6 +56,73 @@
             >
           </li>
         </ul>
+        <div class="mobile-header">
+          <a href="./index.html" class="logo"
+            ><span class="logo__web">Web</span>Studio</a
+          >
+          <button type="button" class="menu-open">
+            <svg class="menu-open__icon">
+              <use href="./images/symbol-defs.svg#icon-mobopen"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="mobile-nav is-hidden">
+          <div class="container mobile-container">
+            <button type="button" class="menu-close">
+              <svg class="menu-close__icon">
+                <use href="./images/symbol-defs.svg#icon-mobclose"></use>
+              </svg>
+            </button>
+
+            <nav class="main-nav">
+              <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                  <a href="./index.html" class="mobile-menu__link"
+                    >Студия</a
+                  >
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="./portfolio.html" class="mobile-menu__link  mobile-menu__link--active">Портфолио</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="" class="mobile-menu__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="mobile-nav__bottom">
+              <ul class="mobile-contacts__list">
+                <li class="mobile-contacts__item">
+                  <a
+                    href=""
+                    class="mobile-contacts__link mobile-contacts__link--accent"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mobile-contacts__item">
+                  <a href="" class="mobile-contacts__link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+
+              <ul class="mobile-sl__list">
+                <li class="mobile-sl__item">
+                  <a href="" class="mobile-sl_link">Instagram</a>
+                </li>
+                <li class="mobile-sl__item">
+                  <a href="" class="mobile-sl_link">Twitter</a>
+                </li>
+                <li class="mobile-sl__item">
+                  <a href="" class="mobile-sl_link">Facebook</a>
+                </li>
+                <li class="mobile-sl__item">
+                  <a href="" class="mobile-sl_link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -65,12 +132,15 @@
           <h1 class="portfolio__title hidden">Портфолио</h1>
           <ul class="portfolio__filters">
             <li class="portfolio__item">
-              <button type="button" class="portfolio__button">Все</button></li>
+              <button type="button" class="portfolio__button">Все</button>
+            </li>
             <li class="portfolio__item">
               <button type="button" class="portfolio__button">Веб-сайты</button>
             </li>
             <li class="portfolio__item">
-              <button type="button" class="portfolio__button">Приложения</button>
+              <button type="button" class="portfolio__button">
+                Приложения
+              </button>
             </li>
             <li class="portfolio__item">
               <button type="button" class="portfolio__button">Дизайн</button>
@@ -81,16 +151,34 @@
           </ul>
           <ul class="card-set">
             <li class="card-set__item">
-              <a href="" class="card-set__link"
-                >
+              <a href="" class="card-set__link">
                 <div class="product-thumb">
-                <p class="product-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-                <img
-                  src="./images/tehno.jpg"
-                  alt="Веб-сайт Технокряк"
-                  width="370"
-                  height="294"
-                />
+                  <p class="product-text">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/1desk-min.jpg   1x,
+                        ./images/1desk@2-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/1tab-min.jpg   1x,
+                        ./images/1tab@2-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/1-min.jpg 1x, ./images/1@2-min.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/1-min.jpg" alt="Веб-сайт Технокряк" />
+                  </picture>
                 </div>
                 <div class="card-content">
                   <h2 class="card-content__work">Технохряк</h2>
@@ -99,16 +187,37 @@
               </a>
             </li>
             <li class="card-set__item">
-              <a href="" class="card-set__link"
-                >
+              <a href="" class="card-set__link">
                 <div class="product-thumb">
-                <p class="product-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-                <img
-                  src="./images/neworlean.jpg"
-                  alt="Постер New Orlean vs Golden Star"
-                  width="370"
-                  height="294"
-                />
+                  <p class="product-text">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/2desk-min.jpg   1x,
+                        ./images/2desk@2-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/2tab-min.jpg   1x,
+                        ./images/2tab@2-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/2-min.jpg 1x, ./images/2@2-min.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/2-min.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                    />
+                  </picture>
                 </div>
                 <div class="card-content">
                   <h2 class="card-content__work">
@@ -119,16 +228,34 @@
               </a>
             </li>
             <li class="card-set__item">
-              <a href="" class="card-set__link"
-                >
+              <a href="" class="card-set__link">
                 <div class="product-thumb">
-                <p class="product-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-                <img
-                  src="./images/seafood.jpg"
-                  alt="Ресторан Seafood"
-                  width="370"
-                  height="294"
-                />
+                  <p class="product-text">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/3desk-min.jpg   1x,
+                        ./images/3desk@2-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/3tab-min.jpg   1x,
+                        ./images/3tab@2-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/3-min.jpg 1x, ./images/3@2-min.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/3-min.jpg" alt="Ресторан Seafood" />
+                  </picture>
                 </div>
                 <div class="card-content">
                   <h2 class="card-content__work">Ресторан Seafood</h2>
@@ -137,16 +264,34 @@
               </a>
             </li>
             <li class="card-set__item">
-              <a href="" class="card-set__link"
-                >
+              <a href="" class="card-set__link">
                 <div class="product-thumb">
-                <p class="product-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-                <img
-                  src="./images/prime.jpg"
-                  alt="Проект Prime"
-                  width="370"
-                  height="294"
-                />
+                  <p class="product-text">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/4desk-min.jpg   1x,
+                        ./images/4desk@2-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/4tab-min.jpg   1x,
+                        ./images/4tab@2-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/4-min.jpg 1x, ./images/4@2-min.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/4-min.jpg" alt="Проект Prime" />
+                  </picture>
                 </div>
                 <div class="card-content">
                   <h2 class="card-content__work">Проект Prime</h2>
@@ -155,16 +300,34 @@
               </a>
             </li>
             <li class="card-set__item">
-              <a href="" class="card-set__link"
-                >
+              <a href="" class="card-set__link">
                 <div class="product-thumb">
-                <p class="product-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-                <img
-                  src="./images/boxes.jpg"
-                  alt="Проект Boxes"
-                  width="370"
-                  height="294"
-                />
+                  <p class="product-text">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/5desk-min.jpg   1x,
+                        ./images/5desk@2-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/5tab-min.jpg   1x,
+                        ./images/5tab@2-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/5-min.jpg 1x, ./images/5@2-min.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/5-min.jpg" alt="Проект Boxes" />
+                  </picture>
                 </div>
                 <div class="card-content">
                   <h2 class="card-content__work">Проект Boxes</h2>
@@ -173,16 +336,37 @@
               </a>
             </li>
             <li class="card-set__item">
-              <a href="" class="card-set__link"
-                >
+              <a href="" class="card-set__link">
                 <div class="product-thumb">
-                <p class="product-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-                <img
-                  src="./images/inspiration.jpg"
-                  alt="Inspiration has no Borders"
-                  width="370"
-                  height="294"
-                />
+                  <p class="product-text">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/6desk-min.jpg   1x,
+                        ./images/6desk@2-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/6tab-min.jpg   1x,
+                        ./images/6tab@2-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/6-min.jpg 1x, ./images/6@2-min.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/6-min.jpg"
+                      alt="Inspiration has no Borders"
+                    />
+                  </picture>
                 </div>
                 <div class="card-content">
                   <h2 class="card-content__work">Inspiration has no Borders</h2>
@@ -191,16 +375,37 @@
               </a>
             </li>
             <li class="card-set__item">
-              <a href="" class="card-set__link"
-                >
+              <a href="" class="card-set__link">
                 <div class="product-thumb">
-                <p class="product-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-                <img
-                  src="./images/limited.jpg"
-                  alt="Издание Limited Edition"
-                  width="370"
-                  height="294"
-                />
+                  <p class="product-text">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/7desk-min.jpg   1x,
+                        ./images/7desk@2-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/7tab-min.jpg   1x,
+                        ./images/7tab@2-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/7-min.jpg 1x, ./images/7@2-min.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/7-min.jpg"
+                      alt="Издание Limited Edition"
+                    />
+                  </picture>
                 </div>
                 <div class="card-content">
                   <h2 class="card-content__work">Издание Limited Edition</h2>
@@ -209,16 +414,34 @@
               </a>
             </li>
             <li class="card-set__item">
-              <a href="" class="card-set__link"
-                >
+              <a href="" class="card-set__link">
                 <div class="product-thumb">
-                <p class="product-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-                <img
-                  src="./images/lab.jpg"
-                  alt="Проект LAB"
-                  width="370"
-                  height="294"
-                />
+                  <p class="product-text">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/8desk-min.jpg   1x,
+                        ./images/8desk@2-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/8tab-min.jpg   1x,
+                        ./images/8tab@2-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/8-min.jpg 1x, ./images/8@2-min.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/8-min.jpg" alt="Проект LAB" />
+                  </picture>
                 </div>
                 <div class="card-content">
                   <h2 class="card-content__work">Проект LAB</h2>
@@ -227,16 +450,34 @@
               </a>
             </li>
             <li class="card-set__item">
-              <a href="" class="card-set__link"
-                >
+              <a href="" class="card-set__link">
                 <div class="product-thumb">
-                <p class="product-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-                <img
-                  src="./images/business.jpg"
-                  alt="Growing Business"
-                  width="370"
-                  height="294"
-                />
+                  <p class="product-text">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/9desk-min.jpg   1x,
+                        ./images/9desk@2-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/9tab-min.jpg   1x,
+                        ./images/9tab@2-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/9-min.jpg 1x, ./images/9@2-min.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/9-min.jpg" alt="Growing Business" />
+                  </picture>
                 </div>
                 <div class="card-content">
                   <h2 class="card-content__work">Growing Business</h2>
@@ -251,8 +492,9 @@
 
     <footer class="footer">
       <div class="container footer__container">
-        <div>
-          <a href="./index.html" class="logo logo--footer"
+        <div class="footer__tab-container">
+          <div>
+            <a href="./index.html" class="logo logo--footer"
             ><span class="logo__web">Web</span>Studio</a
           >
           <address class="address">
@@ -280,8 +522,7 @@
                 >
               </li>
             </ul>
-          </address>
-        </div>
+          </address></div>
         <div class="join">
           <h3 class="join__title">Присоединяйтесь</h3>
           <ul class="join__list">
@@ -315,25 +556,27 @@
             </li>
           </ul>
         </div>
-        <form class="subscribe">
-          <b class="subscribe__title">Подпишитесь на рассылку</b>
-          <div class="subscribe__flex-container">
-            <input
-              type="email"
-              name="email"
-              placeholder="E-mail"
-              class="subscribe__input"
-            />
-            <button type="submit" class="subscribe__button">
-              Подписаться<svg class="subscribe__icon">
-                <use href="./images/symbol-defs.svg#icon-send"></use>
-              </svg>
-            </button>
-          </div>
+      </div>
+        <div>
+          <form class="subscribe">
+            <b class="subscribe__title">Подпишитесь на рассылку</b>
+            <div class="subscribe__flex-container">
+              <input
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                class="subscribe__input"
+              />
+              <button type="submit" class="subscribe__button">
+                Подписаться<svg class="subscribe__icon">
+                  <use href="./images/symbol-defs.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+        </div>
         </form>
       </div>
     </footer>
-  </body>
-</html>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
