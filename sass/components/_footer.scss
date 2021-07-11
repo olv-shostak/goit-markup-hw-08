@@ -6,16 +6,17 @@
 
 .logo--footer {
   font-size: 24px;
-line-height: 1.167;
+  line-height: 1.167;
 
-@media screen and (min-width: 1200px) {
-  font-size: 26px;
-line-height: 1.192;
-}
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.192;
+  }
 }
 
 .footer__tab-container {
   text-align: center;
+  margin-bottom: 60px;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -25,6 +26,7 @@ line-height: 1.192;
 
   @media screen and (min-width: 1200px) {
     justify-content: flex-start;
+    margin-bottom: 0;
   }
 }
 
@@ -59,9 +61,9 @@ line-height: 1.192;
 }
 
 @media screen and (min-width: 1200px) {
-.footer__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
